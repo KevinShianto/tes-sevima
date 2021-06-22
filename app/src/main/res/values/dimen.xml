@@ -4,6 +4,7 @@
     <dimen name="text_h2">48dp</dimen>
     <dimen name="text_h3">42dp</dimen>
 
+    <dimen name="text_xlarge">42dp</dimen>
     <dimen name="text_large">32dp</dimen>
     <dimen name="text_medium">24dp</dimen>
     <dimen name="text_small">18dp</dimen>

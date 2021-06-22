@@ -17,9 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".auth.activity.OnboardingActivity"/>
-        <activity android:name=".auth.activity.LoginActivity"/>
-        <activity android:name=".auth.activity.RegisterActivity"/>
-        <activity android:name=".home.HomeActivity"/>
+        <activity android:name=".auth.activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".auth.activity.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".home.HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".auth.activity.VerificationActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
     </application>
 

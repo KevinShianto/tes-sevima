@@ -41,26 +41,27 @@ class LoginActivity: BaseActivity() {
                     .addOnCompleteListener {
 
                         if (!it.isSuccessful) {
-                            return@addOnCompleteListener
                             loadingDialog.dismiss()
                             Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT)
                                 .show()
+                            return@addOnCompleteListener
                         } else {
                             loadingDialog.dismiss()
                             Toast.makeText(this, "Succesfully Login", Toast.LENGTH_SHORT).show()
+                            toHome()
                         }
                     }
                     .addOnFailureListener {
                         loadingDialog.dismiss()
                         Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT).show()
                     }
-                toHome()
             }
         }
     }
 
     fun toHome() {
         val intent = Intent(this, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
 }

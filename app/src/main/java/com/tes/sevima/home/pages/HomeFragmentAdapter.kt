@@ -11,7 +11,6 @@ import com.tes.sevima.home.pages.other.OtherFragment
 
 class HomeFragmentAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
 
-    // sebuah list yang menampung objek Fragment
     private val pages = listOf(
         HomeFragment(),
         ClassesFragment(),
@@ -20,7 +19,6 @@ class HomeFragmentAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
         OtherFragment()
     )
 
-    // menentukan fragment yang akan dibuka pada posisi tertentu
     override fun getItem(position: Int): Fragment {
         return pages[position]
     }
@@ -29,12 +27,13 @@ class HomeFragmentAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
         return pages.size
     }
 
-    // judul untuk tabs
     override fun getPageTitle(position: Int): CharSequence? {
-        return when(position){
-            0 -> "First Tab"
-            1 -> "Second Tab"
-            else -> "Third Tab"
+        return when (position) {
+            0 -> "Home"
+            1 -> "Class"
+            2 -> "Chat"
+            3 -> "Explore"
+            else -> "Other"
         }
     }
 }

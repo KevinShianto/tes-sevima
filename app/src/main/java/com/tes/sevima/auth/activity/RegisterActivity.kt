@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.tes.sevima.R
 import com.tes.sevima.base.BaseActivity
+import com.tes.sevima.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity: BaseActivity() {
@@ -39,6 +40,7 @@ class RegisterActivity: BaseActivity() {
                     } else {
                         loadingDialog.dismiss()
                         Toast.makeText(this, "Succesfully Register", Toast.LENGTH_SHORT).show()
+                        toVerification()
                     }
                 }.addOnFailureListener {
                     loadingDialog.dismiss()
@@ -63,5 +65,11 @@ class RegisterActivity: BaseActivity() {
             return false
         }
         return true
+    }
+
+    fun toVerification() {
+        val intent = Intent(this, VerificationActivity::class.java)
+        intent.putExtra("email", email_text.text.toString())
+        startActivity(intent)
     }
 }

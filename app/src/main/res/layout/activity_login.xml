@@ -138,7 +138,6 @@
                     />
                 <Button
                     android:layout_marginTop="@dimen/margin_xsmall"
-                    android:paddingRight="48dp"
                     android:paddingVertical="@dimen/margin_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -146,7 +145,6 @@
                     android:textColor="@color/sevima_font"
                     android:textAllCaps="false"
                     android:backgroundTint="@color/sevima_secondary"
-                    android:drawableLeft="@drawable/icon_google"
                     />
             </LinearLayout>
 
