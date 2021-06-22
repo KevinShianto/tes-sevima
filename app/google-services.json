@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645774119093",
+    "project_id": "tes-sevima",
+    "storage_bucket": "tes-sevima.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645774119093:android:4fc0f4af5e0af4b9482efc",
+        "android_client_info": {
+          "package_name": "com.tes.sevima"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645774119093-cf4toig5efju5om2dobnri1pvecm7i43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA793SpZCRxNDmLEAQS6owuOSuLP9Udnkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645774119093-cf4toig5efju5om2dobnri1pvecm7i43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
