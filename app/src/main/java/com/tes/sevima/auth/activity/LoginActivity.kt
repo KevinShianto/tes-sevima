@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.tes.sevima.R
 import com.tes.sevima.base.BaseActivity
 import com.tes.sevima.component.LoadingDialog
+import com.tes.sevima.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -30,24 +31,36 @@ class LoginActivity: BaseActivity() {
             val email = email_text.text.toString()
             val password = password_text.text.toString()
 
-            loadingDialog.show(supportFragmentManager, "Loading Dialog")
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Sorry, please fill email and password", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                loadingDialog.show(supportFragmentManager, "Loading Dialog")
 
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener{
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener {
 
-                    if (!it.isSuccessful){ return@addOnCompleteListener
+                        if (!it.isSuccessful) {
+                            return@addOnCompleteListener
+                            loadingDialog.dismiss()
+                            Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT)
+                                .show()
+                        } else {
+                            loadingDialog.dismiss()
+                            Toast.makeText(this, "Succesfully Login", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .addOnFailureListener {
                         loadingDialog.dismiss()
                         Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT).show()
                     }
-                    else {
-                        loadingDialog.dismiss()
-                        Toast.makeText(this, "Succesfully Login", Toast.LENGTH_SHORT).show()
-                    }
-                }
-                .addOnFailureListener{
-                    loadingDialog.dismiss()
-                    Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT).show()
-                }
+                toHome()
+            }
         }
+    }
+
+    fun toHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
     }
 }

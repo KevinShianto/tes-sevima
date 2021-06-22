@@ -49,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/email_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_small"
@@ -68,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/fullname_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_small"
@@ -88,6 +90,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"/>
                 <EditText
+                    android:id="@+id/password_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_small"
@@ -108,6 +111,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"/>
                 <EditText
+                    android:id="@+id/confirm_password_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_small"
@@ -128,6 +132,7 @@
                 android:layout_marginTop="@dimen/margin_large"
                 android:background="@color/white">
                 <Button
+                    android:id="@+id/sign_up_button"
                     android:layout_marginTop="@dimen/margin_small"
                     android:padding="@dimen/margin_medium"
                     android:layout_width="match_parent"

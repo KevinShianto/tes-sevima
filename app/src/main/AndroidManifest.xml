@@ -19,6 +19,7 @@
         <activity android:name=".auth.activity.OnboardingActivity"/>
         <activity android:name=".auth.activity.LoginActivity"/>
         <activity android:name=".auth.activity.RegisterActivity"/>
+        <activity android:name=".home.HomeActivity"/>
 
     </application>
 
