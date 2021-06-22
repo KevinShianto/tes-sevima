@@ -30,7 +30,7 @@ class LoginActivity: BaseActivity() {
             val email = email_text.text.toString()
             val password = password_text.text.toString()
 
-            loadingDialog.show(supportFragmentManager,"Loading Dialog")
+            loadingDialog.show(supportFragmentManager, "Loading Dialog")
 
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener{

@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         ></ProgressBar>
     <TextView
+        android:id="@+id/loading_title"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
